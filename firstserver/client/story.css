@@ -1,0 +1,78 @@
+#div1 {
+    background-color: navajowhite;
+    width: 50%;
+    column-count: 3;
+    column-gap: 5px;
+    column-rule: 1px solid blue;
+    float: left
+}
+
+#div2 {
+    background-color: aqua;
+    width: 50%;
+    column-count: 3;
+    column-gap: 5px;
+    column-rule: 1px solid red;
+}
+
+#div3 {
+    width: 2000px;
+    height: 900px;
+    background: url(pistol.png) no-repeat, url(hand.png) no-repeat, url(mqueen.png) no-repeat,url(äng.jpg)no-repeat;
+    background-size: 25%, 20%, 60%, 60%;
+    background-position: center, 900px 500px, left, left;
+    float: left;
+}
+
+@font-face {
+    font-family: minecraft;
+    src: url(Minecraft.ttf);
+}
+
+@keyframes example {
+  0%  {color:red; left:87px; top:50px;}
+  25% {color:green; left:146px; top:50px;}
+  50% {color:blue; left:87px; top:50px;}
+  75% {color:yellow; left:146px; top:50px;}
+ 100% {color:red; left:87px; top:50px;}
+}
+
+
+#animation {
+    background-color: red;
+    width: 0px;
+    height: 0px;
+    position: relative;
+    animation-name: example;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    font-family: minecraft;
+    font-size: 75px;
+
+}
+
+#o1 {
+    position: absolute;
+    font-size: 100px;
+    font-family: minecraft;
+    animation-name: rainbow;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    height: 90px;
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+#o2 {
+    position: absolute;
+    font-size: 100px;
+    margin-left: 200px;
+    margin-top: 30px;
+    font-family: minecraft;
+    animation-name: rainbow;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    height: 90px;
+    text-align: center
+}
+
