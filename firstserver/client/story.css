@@ -16,12 +16,19 @@
 }
 
 #div3 {
-    width: 2000px;
+    width: 1000px;
     height: 900px;
     background: url(pistol) no-repeat, url(hand) no-repeat, url(mqueen) no-repeat,url(ang)no-repeat;
     background-size: 25%, 20%, 60%, 60%;
-    background-position: center, 900px 500px, left, left;
+    background-position: center, center, left, left;
     float: left;
+}
+
+#div4 {
+    float: left;
+    background-color: pink;
+
+
 }
 
 @font-face {
