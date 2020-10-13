@@ -4,12 +4,12 @@ const personModel = require('./PersonModel')
 const app = express()
 const port = 3000
 
-const clientDir = __dirname + "\\client\\"
+const clientDir = __dirname + "\\client\\" //Förkortning så man slipper skriva ut den exakta mappen man är i
 
 app.use(express.json())
 app.use(express.urlencoded())
 
-app.get('/', (req, res) => res.sendFile(clientDir + "index2.html"))
+app.get('/', (req, res) => res.sendFile(clientDir + "index2.html")) // Hur man skickar en fil till användaren av sidan
 
 app.get('/cssen', (req, res) => {
     res.sendFile(clientDir + "story.css")
@@ -37,11 +37,11 @@ app.get('/lizard', (req, res) => {
 
 app.post('/', (req, res) => {
 
-    let person = personModel.createPerson(req.body.username, req.body.email)
+    let person = personModel.createPerson(req.body.username, req.body.email) // Här körs PersonModel och en person med username och email skapas
   
-    dBModule.storeElement(person)
+    dBModule.storeElement(person) // Här körs dBModule och infromationen sparar i databasen
   
-    res.redirect('/')
+    res.redirect('/') // Redirectar till en annan sida, i detta fall refreshar den sidan
   })
   
   app.listen(port, () => {
