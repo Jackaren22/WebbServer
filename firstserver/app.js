@@ -6,8 +6,11 @@ const port = 3000
 
 const clientDir = __dirname + "\\client\\" //Förkortning så man slipper skriva ut den exakta mappen man är i
 
+app.set('view engine', 'ejs')
+
 app.use(express.json())
 app.use(express.urlencoded())
+app.use(express.static(clientDir))
 
 app.get('/', (req, res) => res.sendFile(clientDir + "index2.html")) // Hur man skickar en fil till användaren av sidan
 
