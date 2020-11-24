@@ -8,13 +8,21 @@
     <title>Document</title>
 </head>
 <body>
-    <h1> Hello<%- name %>!</h1>
-    <img src="download.jpg"/>
+    
+    <h1> Hello <%= name %> </h1>
     <form action="/" method="post">
         <input type="text" name="name" placeholder="Namn">
         <input type="email" name="email" placeholder="example@email.com">
         <input type="number" name="age" placeholder="33">
         <button type="submit">Okej</button>
     </form>
+    <ol>
+        <% for( let i = 0; i < nameList.length; i++ ) { %>
+            <li>
+                <p>nameList[i]</p>
+            </li>
+        
+        <% } %>
+    </ol>
 </body>
 </html>

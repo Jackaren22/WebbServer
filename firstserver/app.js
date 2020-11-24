@@ -4,6 +4,8 @@ const personModel = require('./PersonModel')
 const app = express()
 const port = 3000
 
+const nameList = ["",""]
+
 const clientDir = __dirname + "\\client\\" //Förkortning så man slipper skriva ut den exakta mappen man är i
 
 app.set('view engine', 'ejs')
@@ -44,7 +46,7 @@ app.post('/', (req, res) => {
   
     dBModule.storeElement(person) // Här körs dBModule och infromationen sparar i databasen
   
-    res.redirect('/') // Redirectar till en annan sida, i detta fall refreshar den sidan
+    res.render('pages/index.ejs', {name: req.body.username, nameList: nameList}) // Redirectar till en annan sida, i detta fall refreshar den sidan
   })
   
   app.listen(port, () => {
